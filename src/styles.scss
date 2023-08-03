@@ -1,0 +1,96 @@
+/* You can add global styles to this file, and also import other style files */
+@font-face {
+  font-family: 'vag_roundedbold';
+  src: url('/src/assets/fonts/vag_rounded_bold-webfont.eot'), url('/src/assets/fonts/vag_rounded_bold-webfont.svg') format('svg');
+  src: url('assets/fonts/vag_rounded_bold-webfont.eot') format('embedded-opentype'), url('assets/fonts/vag_rounded_bold-webfont.svg') format('woff'), url('assets/fonts/vag_rounded_bold-webfont.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+html,body{
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    font-family:vag_roundedbold !important;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #333;
+
+}
+.container-fluid{
+    padding: 0;
+    margin: 0;
+}
+.editLink{
+  color: #337ab7 !important;
+  text-decoration: none !important;
+}
+.editLink:hover{
+  cursor: pointer !important;
+  text-decoration: underline !important;
+}
+.angular-editor-textarea{
+    height: 300px !important;
+    padding: 1% !important;
+    border: 1px solid #EEE !important;
+    border-radius: 0 !important;
+    background-color: white !important;
+}
+.angular-editor-toolbar{
+  font-size: 15px !important;
+}
+.jumbotron-fluid{
+  background-color: #ebebeb;
+
+}
+.conBcgcolor{
+  background-color: #f5f5f5;
+}
+// .top-head h5{
+//   margin-left:30px;
+//   margin-top: 20px;
+//   margin-bottom: 20px;
+  
+// }
+.table th {
+background-color: #e5e5e5;
+}
+.table-striped > tbody > tr:nth-child(odd) > td,
+.table-striped > tbody > tr:nth-child(odd) > th {
+  background-color: #f9f9f9 !important;
+}
+.table-striped > tbody > tr:nth-child(even) > td,
+.table-striped > tbody > tr:nth-child(even) > th {
+  background-color:#f5f5f5 !important;
+}
+.tableView{
+  margin-left: 12px;
+  margin-right: 12px;
+}
+.fa{
+  font-size:16px;
+}
+.btn1{
+  width: 133px;
+  height: 36px;
+  margin-right: 25px;
+  margin-top:15px;
+}
+// html, body { height: 100%; }
+// body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+.content h2{
+  font-size: 12px;
+  margin: 0 0 10px 0;
+  padding: 0px 15px 10px 15px;
+  color: #555555 !important;
+}
+.top-head h5{
+  margin-left:12px ;
+  margin-top: 20px ;
+  margin-bottom: 20px;
+  font-size: 18px !important;
+}
+.col-form-label{
+  font-weight:500 !important;
+}

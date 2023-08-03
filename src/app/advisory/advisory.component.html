@@ -1,0 +1,91 @@
+<!-- <app-spinner *ngIf="Loader"></app-spinner> -->
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="top-head">
+                <h5>Advisory Board</h5>
+            </div>
+            <form [formGroup]="advisoryForm" (ngSubmit)="onSubmit()">
+            <div class="card">
+                <div class="container-fluid main-content">
+                    <div class="form-group row">
+                        <label for="text1" class="col-lg-2 col-form-label float-left">Text 1</label>
+                        <div class="col-lg-10">
+                            <textarea cols="40" rows="4" class="form-control" formControlName="titletext"></textarea>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="container-fluid main-content">
+                    <div class="form-group row">
+                        <label for="text1" class="col-lg-2 col-form-label float-left">Person 1</label>
+                        <div class="col-lg-10">
+                            <textarea cols="40" rows="3" class="form-control" formControlName="person1"></textarea>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="text1" class="col-lg-2 col-form-label float-left">Description</label>
+                        <div class="col-lg-10">
+                            <textarea cols="40" rows="3" class="form-control" formControlName="person1_description"></textarea>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="container-fluid main-content">
+                    <div class="form-group row">
+                        <label for="text1" class="col-lg-2 col-form-label float-left">Person 2</label>
+                        <div class="col-lg-10">
+                            <textarea cols="40" rows="3" class="form-control" formControlName="person2"></textarea>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="text1" class="col-lg-2 col-form-label float-left">Description</label>
+                        <div class="col-lg-10">
+                            <textarea cols="40" rows="3" class="form-control" formControlName="person2_description"></textarea>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="container-fluid main-content">
+                    <div class="form-group row">
+                        <label for="text1" class="col-lg-2 col-form-label float-left">Person 3</label>
+                        <div class="col-lg-10">
+                            <textarea cols="40" rows="3" class="form-control" formControlName="person3"></textarea>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="text1" class="col-lg-2 col-form-label float-left">Description</label>
+                        <div class="col-lg-10">
+                            <textarea cols="40" rows="3" class="form-control" formControlName="person3_description"></textarea>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        <div class="card">
+                <div class="container-fluid main-content">
+                    <div class="form-group row">
+                        <label for="text1" class="col-lg-2 col-form-label float-left">Person 4</label>
+                        <div class="col-lg-10">
+                            <textarea cols="40" rows="3" class="form-control" formControlName="person4"></textarea>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="text1" class="col-lg-2 col-form-label float-left">Description</label>
+                        <div class="col-lg-10">
+                            <textarea cols="40" rows="3" class="form-control" formControlName="person4_description"></textarea>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </form>
+            <button type="submit" class="btn btn-primary ml-3" (click)="onSubmit()">Save</button>
+        </div>
+    </div>
+</div>

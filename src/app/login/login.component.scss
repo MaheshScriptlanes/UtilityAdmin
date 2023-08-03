@@ -1,0 +1,47 @@
+
+.btn-primary{
+    color: #fff;
+    background-color:#0093C1;
+    padding: 10px;
+}
+.btn-primary:hover{
+    color: #fff;
+    background-color:#0093C1; 
+}
+.login h5{
+    font-size:18px;
+}
+.card{
+    width:360px;
+    height:330px;
+    
+    
+}
+
+
+.limiter {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.container-login100 {
+    width: 100%;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    background:#F2F7FB;
+}
+
+.wrap-login100 {
+    overflow: hidden;
+    position: absolute;
+    top:23%;
+    width:100%;
+}
+

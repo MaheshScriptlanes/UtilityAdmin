@@ -1,0 +1,52 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="top-head">
+                <h5>Contact List</h5>
+            </div>
+            <div class="card shadow mr-4 ml-4">
+              <div class="tableView mt-5">
+                <!-- <div class="search d-flex">
+                  <div class="input-group mb-3" style="width:220px;">
+                    <input type="text" class="form-control" placeholder="Search for" id="demo" name="searchText" [(ngModel)]="searchText">
+                    <div class="input-group-append">
+                      <span class="input-group-text"><img src="assets/images/utilityicons/search.png" height="15"></span>
+                    </div>
+                  </div> 
+                  <div class="ml-auto">
+                    <img src="assets/images/utilityicons/leftarrow.png" (click)="setPage(pager.currentPage - 1)" width="8">
+                    {{pager.startIndex+1}}-{{pager.endIndex}} <span>Of</span> {{pager.totalItems}}
+                    <img src="assets/images/utilityicons/rightarrow.png" (click)="setPage(pager.currentPage + 1)" width="8">
+    
+                  </div>             
+                  </div> -->
+              
+                <table class="table table-responsive-lg">
+                  <thead>
+                    <tr class="heading">
+                    <th>Title</th>
+                    <th>Address</th>
+                    <th>Location</th>
+                    <th>Phone</th>
+                    <th>Mail</th>
+                    <th>Edit</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let obj of contactListObject">
+                    <td>{{obj.title}}</td>
+                    <td>{{obj.address}}</td>
+                    <td>{{obj.location}}</td>
+                    <td>{{obj.phone}}</td>
+                    <td>{{obj.mail}}</td>
+                    <td (click)="edit(obj)"><a class="editLink">Edit</a></td>
+                  </tr>
+              
+                  
+                </tbody>
+              </table>
+              </div>      
+        </div>
+        </div>
+    </div>
+</div>

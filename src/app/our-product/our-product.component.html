@@ -1,0 +1,56 @@
+
+<div class="contaier-fluid">
+    <div class="row">
+        <div class="col-lg-12">
+            <!-- <div class="top-head">
+                <h5>Strategy List</h5>
+            </div> -->
+            <div class="container-fluid">
+              <div class="row">
+                  <div class="top-head">
+                      <h5>Strategy List</h5>
+                      </div>
+                  <button class="btn btn1 btn-success ml-auto" (click)="addStrategy()"><img src="assets/images/utilityicons/add.png" style="width: 14px;margin-right:8px;">Add Strategies</button>
+              </div>
+            </div>
+            <div class="card shadow mr-4 ml-4">
+            <div class="tableView mt-3">
+              <!-- <div class="search d-flex">
+                <div class="input-group mb-3" style="width:220px;">
+                  <input type="text" class="form-control" placeholder="Search for" id="demo" name="email">
+                  <div class="input-group-append">
+                    <span class="input-group-text"><img src="assets/images/utilityicons/search.png" height="15"></span>
+                  </div>
+                </div> 
+                <div class="ml-auto">
+                  <img src="assets/images/utilityicons/leftarrow.png">
+                  hasan mujawar
+                  <img src="assets/images/utilityicons/rightarrow.png">
+  
+                </div>             
+                </div> -->
+            <table class="table table-responsive-lg">
+                <thead>
+                  <tr class="heading">
+                    <th>Order</th>
+                    <th>Heading</th>
+                    <th>Edit</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let obj of productObject ">
+                    <td>{{obj.order}}</td>
+                    <td>{{obj.heading}}</td>
+                    <td (click)="edit(obj)"><a class="editLink">Edit content</a></td>
+                 
+                  </tr>
+             
+                  
+                </tbody>
+              </table>
+          
+        </div>
+       </div>
+        </div>
+    </div>
+</div>

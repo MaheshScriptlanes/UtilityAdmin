@@ -1,0 +1,43 @@
+<div class="container-fluid" >
+    <div class="row">
+        <div class="col-lg-12">
+          <div class="top-head">
+            <h5>Add Testimonial &nbsp;
+              <button class="small btn shadow cancel-btn" (click)="Cancel()">Cancel</button></h5>
+        </div>
+        
+        <div class="card">
+            <div class="content">
+              <h2>Page Content</h2>
+            </div>
+            <div class="container-fluid main-content">
+                <form [formGroup]="homePageForm" (ngSubmit)="onSubmit()">
+                    <div class="form-group row">
+                      <label for="text1" class="col-lg-2 col-form-label float-left">Name</label>
+                      <div class="col-lg-10">
+                        <textarea cols="40" rows="2" class="form-control" formControlName="name"></textarea>
+                      </div>
+                    </div>
+             
+                    
+                      <div class="form-group row">
+                        <label for="text4" class="col-lg-2 col-form-label">Testimonial</label>
+                        <div class="col-lg-10">
+                          <angular-editor formControlName="testimonial" [config]="editorConfig"></angular-editor>
+                        </div>
+                      </div>
+                      
+                    </form> 
+                  
+              </div>
+
+                      
+        </div>
+        <button type="submit" class="btn btn-primary ml-2 mt-3" (click)="onSubmit()">Save</button> 
+    
+        
+        </div>
+        </div>
+    </div>
+
+

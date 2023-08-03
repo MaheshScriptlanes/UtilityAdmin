@@ -1,0 +1,63 @@
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-12">
+          <div class="container-fluid">
+            <div class="row">
+                <div class="top-head">
+                    <h5>Blog List</h5>
+                    </div>
+                <button class="btn btn1  ml-auto" (click)="addBlog()"><img src="assets/images/utilityicons/add.png" style="width: 14px;margin-right:8px;">Add Blog</button>
+            </div>
+          </div>
+          <div class="card shadow mr-4 ml-4">
+            <div class="tableView mt-5">
+              <!-- <div class="search d-flex">
+              <div class="input-group mb-3" style="width:220px;">
+                <input type="text" class="form-control" placeholder="Search for" id="demo" name="searchText" [(ngModel)]="searchText">
+                <div class="input-group-append">
+                  <span class="input-group-text"><img src="assets/images/utilityicons/search.png" height="15"></span>
+                </div>
+              </div> 
+              <div class="ml-auto">
+                <img src="assets/images/utilityicons/leftarrow.png" (click)="setPage(pager.currentPage - 1)">
+                {{pager.startIndex+1}}-{{pager.endIndex}} <span>Of</span> {{pager.totalItems}}
+                <img src="assets/images/utilityicons/rightarrow.png" (click)="setPage(pager.currentPage + 1)">
+
+              </div>             
+              </div> -->
+            <table class="table table-responsive-lg"> 
+                <thead>
+                  <tr class="heading">
+                    <th>Title</th>
+                    <th>Active</th>
+                    <th>Published Date</th>
+                    <th>content</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let obj of blogObject">
+                    
+                    <td>{{obj.page_content_extended_title}}</td>
+                    <td>
+                      <ng-template [ngIf]="obj.active== 'on'" [ngIfElse]="cross">
+                        <img src="assets/images/utilityicons/check.png"  width="17">
+                      </ng-template>
+                      
+                      <ng-template #cross>
+                        <img src="assets/images/utilityicons/cross.png"  width="15">
+                      </ng-template>
+                    </td>
+                    <td>{{obj.publish_date_0}}</td>
+                    <td (click)="edit(obj)"><a class="editLink">Edit Content</a></td>
+                  </tr>
+                 
+                </tbody>
+              </table>
+          
+        </div>
+</div>    
+        </div>
+    </div>
+</div>
+

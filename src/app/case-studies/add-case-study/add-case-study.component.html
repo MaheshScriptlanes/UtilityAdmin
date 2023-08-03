@@ -1,0 +1,574 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="top-head">
+                <h5>Case Study &nbsp;
+                    <button class="small btn shadow cancel-btn" (click)="Cancel()">Cancel</button>
+                  </h5>
+                </div>
+            <form [formGroup]="editCaseStudyform" (ngSubmit)="onSubmit()">
+                <div class="card">
+                    <div class="content">
+                        <h2>Settings</h2>
+                      </div>
+                    <div class="container-fluid main-content">  
+                        <div class="form-group row">
+                        <div class="col-lg-2">
+                            <label class="form-check-label" for="gridCheck1"  style="font-weight: 100;">
+                                Active
+                              </label>
+                        </div>
+                        <div class="col-lg-10">
+                          <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="gridCheck1" formControlName="active">
+                           
+                          </div>
+                        </div>
+                      </div>  
+                        <div class="form-group row">
+                            <label for="text3" class="col-lg-2 col-form-label font-weight-bold">Page Title</label>
+                            <div class="col-lg-10">
+                                <input type="text" class="form-control" formControlName="title">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="text4" class="col-lg-2 col-form-label font-weight-bold">Slug</label>
+                            <div class="col-lg-10">
+                                <input type="text" class="form-control" formControlName="slug">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="content">
+                        <h2>Home Page</h2>
+                      </div>
+                    <div class="container-fluid main-content">
+                        <div class="form-group row">
+                            <label for="text1" class="col-lg-2 col-form-label float-left"> Feature Title</label>
+                            <div class="col-lg-10">
+                                <input type="text" class="form-control" formControlName="home_page_feature_title">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="text2" class="col-lg-2 col-form-label">Ua action</label>
+                            <div class="col-lg-10">
+                                <textarea cols="10" rows="3" class="form-control"
+                                    formControlName="home_page_ua_action"></textarea>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="text3" class="col-lg-2 col-form-label">Case study button text</label>
+                            <div class="col-lg-10">
+                                <textarea cols="10" rows="3" class="form-control" formControlName="home_page_case_study_button_text"></textarea>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="text3" class="col-lg-2 col-form-label">Listing excerpt</label>
+                            <div class="col-lg-10">
+                                <textarea cols="10" rows="3" class="form-control" formControlName="home_page_listing_excerpt"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                
+                    <div class="content">
+                        <h2>Banner</h2>
+                      </div>
+                    <div class="container-fluid main-content">
+
+                        <div class="form-group row">
+                            <label for="text1" class="col-lg-2 col-form-label float-left">Background Image</label>
+                            <div class="col-lg-3">
+                                <input type="text" class="form-control" 
+                                 placeholder="Choose/Upload image"  data-toggle="modal" data-target="#myModal" (click)="getImages()">
+                                 <div class="image-view mt-2"  *ngIf="editCaseStudyform.value.image1"> 
+                                    <img src={{baseUrl+editCaseStudyform.value.image1}} height="100" width="100">
+                                  </div> 
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="text2" class="col-lg-2 col-form-label">Col 1 title</label>
+                            <div class="col-lg-10">
+                                <input type="text" class="form-control" formControlName="banner_col_1_title">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="text3" class="col-lg-2 col-form-label">Col 1 text</label>
+                            <div class="col-lg-10">
+                                <textarea cols="10" rows="3" class="form-control" formControlName="banner_col_1_text"></textarea>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="text2" class="col-lg-2 col-form-label">Col 2 title</label>
+                            <div class="col-lg-10">
+                                <input type="text" class="form-control" formControlName="banner_col_2_title">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="text3" class="col-lg-2 col-form-label">Col 2 text</label>
+                            <div class="col-lg-10">
+                                <textarea cols="10" rows="3" class="form-control" formControlName="banner_col_2_text"></textarea>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="text2" class="col-lg-2 col-form-label">Col 3 title</label>
+                            <div class="col-lg-10">
+                                <input type="text" class="form-control" formControlName="banner_col_3_title">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="text3" class="col-lg-2 col-form-label">Col 3 text</label>
+                            <div class="col-lg-10">
+                                <textarea cols="10" rows="3" class="form-control" formControlName="banner_col_3_text"></textarea>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="text3" class="col-lg-2 col-form-label">Title</label>
+                            <div class="col-lg-10">
+                                <textarea cols="10" rows="3" class="form-control" formControlName="banner_title"></textarea>
+                            </div>
+                        </div>
+                     
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="content">
+                        <h2>Block 1</h2>
+                      </div>
+                    <div class="container-fluid main-content">
+
+                        <div class="form-group row">
+                            <label for="text1" class="col-lg-2 col-form-label float-left">Title</label>
+                            <div class="col-lg-10">
+                                <input type="text" class="form-control" formControlName="block_1_title">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="text3" class="col-lg-2 col-form-label">Sub title</label>
+                            <div class="col-lg-10">
+                                <textarea cols="10" rows="3" class="form-control" formControlName="block_1_sub_title"></textarea>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="text2" class="col-lg-2 col-form-label">Col 1 title</label>
+                            <div class="col-lg-10">
+                                <input type="text" class="form-control" formControlName="block_1_col_1_title">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="text3" class="col-lg-2 col-form-label">Col 1 text</label>
+                            <div class="col-lg-10">
+                                <angular-editor formControlName="editor1"[config]="editorConfig"></angular-editor>
+                        
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="text2" class="col-lg-2 col-form-label">Col 2 title</label>
+                            <div class="col-lg-10">
+                                <input type="text" class="form-control" formControlName="block_1_col_2_title">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="text3" class="col-lg-2 col-form-label">Col 2 text</label>
+                            <div class="col-lg-10">
+                                <angular-editor formControlName="editor2"[config]="editorConfig"></angular-editor>
+                        
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="text2" class="col-lg-2 col-form-label">Col 3 title</label>
+                            <div class="col-lg-10">
+                                <input type="text" class="form-control" formControlName="block_1_col_3_title">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="text3" class="col-lg-2 col-form-label">Col 3 text</label>
+                            <div class="col-lg-10">
+                                <angular-editor formControlName="editor3"[config]="editorConfig"></angular-editor>
+                                
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="content">
+                        <h2>Block 2</h2>
+                      </div>
+                    <div class="container-fluid main-content">
+
+                        <div class="form-group row">
+                            <label for="text1" class="col-lg-2 col-form-label float-left">Background Image</label>
+                            <div class="col-lg-3">
+                                <input type="text" class="form-control"  placeholder="Choose/Upload Image" 
+                                data-toggle="modal" data-target="#myModalTwo" (click)="getImages()" >
+                                <div class="image-view mt-2" *ngIf="editCaseStudyform.value.image2">
+                                  <img src={{baseUrl+editCaseStudyform.value.image2}} height="100" width="100" >
+                                </div>
+                            </div>
+
+                        
+
+                        </div>
+                        <div class="form-group row">
+                            <label for="text3" class="col-lg-2 col-form-label">Qoute</label>
+                            <div class="col-lg-10">
+                                <textarea cols="10" rows="3" class="form-control" formControlName="block_2_quote"></textarea>
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="text1" class="col-lg-2 col-form-label float-left">Author</label>
+                            <div class="col-lg-10">
+                                <input type="text" class="form-control" formControlName="block_2_author">
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="text1" class="col-lg-2 col-form-label float-left">City</label>
+                            <div class="col-lg-10">
+                                <input type="text" class="form-control" formControlName="block_2_city">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="content">
+                        <h2>Block 3</h2>
+                      </div>
+                    <div class="container-fluid main-content">
+
+                        <div class="form-group row">
+                            <label for="text1" class="col-lg-2 col-form-label float-left">Title</label>
+                            <div class="col-lg-10">
+                                <input type="text" class="form-control" formControlName="block_3_title">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="text3" class="col-lg-2 col-form-label">Sub title</label>
+                            <div class="col-lg-10">
+                                <textarea cols="10" rows="3" class="form-control" formControlName="block_3_sub_title"></textarea>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="text2" class="col-lg-2 col-form-label">Col 1 title</label>
+                            <div class="col-lg-10">
+                                <input type="text" class="form-control" formControlName="block_3_col_1_title">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="text3" class="col-lg-2 col-form-label">Col 1 text</label>
+                            <div class="col-lg-10">
+                                <angular-editor formControlName="editor4"[config]="editorConfig"></angular-editor>
+        
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="text2" class="col-lg-2 col-form-label">Col 2 title</label>
+                            <div class="col-lg-10">
+                                <input type="text" class="form-control" formControlName="block_3_col_2_title">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="text3" class="col-lg-2 col-form-label">Col 2 text</label>
+                            <div class="col-lg-10">
+                                <angular-editor formControlName="editor5"[config]="editorConfig"></angular-editor>
+                        
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="text2" class="col-lg-2 col-form-label">Col 3 title</label>
+                            <div class="col-lg-10">
+                                <input type="text" class="form-control" formControlName="block_3_col_3_title">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="text3" class="col-lg-2 col-form-label">Col 3 text</label>
+                            <div class="col-lg-10">
+                                <angular-editor formControlName="editor6"[config]="editorConfig"></angular-editor>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="content">
+                        <h2>Block 4</h2>
+                      </div>
+                    <div class="container-fluid main-content">
+
+                        <div class="form-group row">
+                            <label for="text1" class="col-lg-2 col-form-label float-left">Background Image</label>
+                            <div class="col-lg-3">
+                                <input type="text" class="form-control"
+                                 placeholder="Choose/Upload image"  data-toggle="modal" data-target="#myModalThree" (click)="getImages()">
+                                 <div class="image-view mt-2" *ngIf="editCaseStudyform.value.image3">
+                                    <img src={{baseUrl+editCaseStudyform.value.image3}} height="100" width="100" >
+                                  </div> 
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="text3" class="col-lg-2 col-form-label">Qoute</label>
+                            <div class="col-lg-10">
+                                <textarea cols="10" rows="3" class="form-control" formControlName="block_4_quote"></textarea>
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="text1" class="col-lg-2 col-form-label float-left">Author</label>
+                            <div class="col-lg-10">
+                                <input type="text" class="form-control" formControlName="block_4_author">
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="text1" class="col-lg-2 col-form-label float-left">City</label>
+                            <div class="col-lg-10">
+                                <input type="text" class="form-control" formControlName="block_4_city">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="card">
+                    <div class="content">
+                        <h2>Block 5</h2>
+                      </div>
+                    <div class="container-fluid main-content">
+
+                        <div class="form-group row">
+                            <label for="text1" class="col-lg-2 col-form-label float-left">Title</label>
+                            <div class="col-lg-10">
+                                <input type="text" class="form-control" formControlName="block_5_title">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="text3" class="col-lg-2 col-form-label">Sub title</label>
+                            <div class="col-lg-10">
+                                <textarea cols="10" rows="3" class="form-control" formControlName="block_5_sub_title"></textarea>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="text2" class="col-lg-2 col-form-label">Col 1 title</label>
+                            <div class="col-lg-10">
+                                <input type="text" class="form-control" formControlName="block_5_col_1_title">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="text3" class="col-lg-2 col-form-label">Col 1 text</label>
+                            <div class="col-lg-10">
+                                <angular-editor formControlName="editor7"[config]="editorConfig"></angular-editor>
+                                
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="text2" class="col-lg-2 col-form-label">Col 2 title</label>
+                            <div class="col-lg-10">
+                                <input type="text" class="form-control" formControlName="block_5_col_2_title">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="text3" class="col-lg-2 col-form-label">Col 2 text</label>
+                            <div class="col-lg-10">
+                                <angular-editor formControlName="editor8"[config]="editorConfig"></angular-editor>
+                    
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="text2" class="col-lg-2 col-form-label">Col 3 title</label>
+                            <div class="col-lg-10">
+                                <input type="text" class="form-control" formControlName="block_5_col_3_title">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="text3" class="col-lg-2 col-form-label">Col 3 text</label>
+                            <div class="col-lg-10">
+                                <angular-editor formControlName="editor9"[config]="editorConfig"></angular-editor>
+                            </div>
+                        </div>
+                       
+                    </div>
+                </div>
+
+
+                <div class="card">
+                
+                    <div class="content">
+                        <h2>Meta data</h2>
+                      </div>
+                    <div class="container-fluid main-content">
+                        <div class="form-group row">
+                            <label for="text3" class="col-lg-2 col-form-label">Meta title</label>
+                            <div class="col-lg-10">
+                                <input type="text" class="form-control" formControlName="meta_data_meta_title">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="text3" class="col-lg-2 col-form-label">Meta Description</label>
+                            <div class="col-lg-10">
+                                <textarea cols="10" rows="3" class="form-control" formControlName="meta_data_meta_description"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+            <button type="submit" class="btn btn-primary ml-3" (click)="onSubmit()">Save</button>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="modal" id="myModal" *ngIf="modalOpen" data-backdrop="false">
+          <div class="modal-dialog">
+            <div class="modal-content">
+    
+              <div class="modal-header">
+                <h3 class="modal-title">Insert Image</h3>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+              </div>
+        
+              <div class="modal-body">
+                <button type="button" class="btn btn-default btn-two mt-2" (click)="loadImage()">Upload File</button>
+                <div [hidden]="IsHidden" class="uploadfilecontainer" (click)="fileInput.click()" appDragDrop (onFileDropped)="uploadFile($event)">
+                  <input hidden type="file" #fileInput (change)="uploadFile($event.target.files)" >
+                  <p style="margin-top: 50px;margin-bottom: 50px;text-align: center;">Click or Drop files here to upload</p>
+                </div>
+                  <!-- <div  class="files-list" *ngFor="let file of files;let i=index">
+                    <p>{{ file.imag_path }}</p>
+                    <button class="delete-file" (click)="deleteAttachment(i)">
+                      <img src="../../assets/Recycle_Bin_Full.png">
+                    </button>
+                  </div> -->
+                <div class="row" >
+                    <app-spinner *ngIf="imageLoader"></app-spinner>
+                    <figure class=" col-lg-3 col-md-3 col-sm-3"  *ngFor="let obj of backGroundImage">
+                        
+                        <img alt="picture" data-dismiss="modal" (click)="selectImageOne(obj)"
+                        src={{baseUrl+obj.path}}  width="100" height="60">
+                      
+                    </figure>
+    
+    
+              
+        </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+              </div>
+        
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+
+
+
+  
+<div class="container-fluid">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="modal" id="myModalTwo" *ngIf="modalOpen" data-backdrop="false">
+          <div class="modal-dialog">
+            <div class="modal-content">
+    
+              <div class="modal-header">
+                <h3 class="modal-title">Insert Image</h3>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+              </div>
+        
+              <div class="modal-body">
+                <button type="button" class="btn btn-default btn-two mt-2" (click)="loadImage()">Upload File</button>
+                <div [hidden]="IsHidden" class="uploadfilecontainer" (click)="fileInput.click()" appDragDrop (onFileDropped)="uploadFile($event)">
+                  <input hidden type="file" #fileInput (change)="uploadFile($event.target.files)" >
+                  <p style="margin-top: 50px;margin-bottom: 50px;text-align: center;">Click or Drop files here to upload</p>
+                </div>
+                  <!-- <div  class="files-list" *ngFor="let file of files;let i=index">
+                    <p>{{ file.imag_path }}</p>
+                    <button class="delete-file" (click)="deleteAttachment(i)">
+                      <img src="../../assets/Recycle_Bin_Full.png">
+                    </button>
+                  </div> -->
+                <div class="row" >
+                    <app-spinner *ngIf="imageLoader"></app-spinner>
+                    <figure class=" col-lg-3 col-md-3 col-sm-3"  *ngFor="let obj of backGroundImage">
+                    
+                        <img alt="picture" data-dismiss="modal" (click)="selectImageTwo(obj)"
+                        src={{baseUrl+obj.path}}  width="100" height="60">
+                      
+                    </figure>
+    
+    
+              
+        </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+              </div>
+        
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+
+
+
+  
+<div class="container-fluid">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="modal" id="myModalThree" *ngIf="modalOpen" data-backdrop="false">
+          <div class="modal-dialog">
+            <div class="modal-content">
+    
+              <div class="modal-header">
+                <h3 class="modal-title">Insert Image</h3>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+              </div>
+        
+              <div class="modal-body">
+                <button type="button" class="btn btn-default btn-two mt-2" (click)="loadImage()">Upload File</button>
+                <div [hidden]="IsHidden" class="uploadfilecontainer" (click)="fileInput.click()" appDragDrop (onFileDropped)="uploadFile($event)">
+                  <input hidden type="file" #fileInput (change)="uploadFile($event.target.files)" >
+                  <p style="margin-top: 50px;margin-bottom: 50px;text-align: center;">Click or Drop files here to upload</p>
+                </div>
+                  <!-- <div  class="files-list" *ngFor="let file of files;let i=index">
+                    <p>{{ file.imag_path }}</p>
+                    <button class="delete-file" (click)="deleteAttachment(i)">
+                      <img src="../../assets/Recycle_Bin_Full.png">
+                    </button>
+                  </div> -->
+                <div class="row" >
+                    <app-spinner *ngIf="imageLoader"></app-spinner>
+                    <figure class=" col-lg-3 col-md-3 col-sm-3"  *ngFor="let obj of backGroundImage">
+                    
+                        <img alt="picture"  data-dismiss="modal" (click)="selectImageThree(obj)"
+                        src={{baseUrl+obj.path}}  width="100" height="60">
+                      
+                    </figure>
+    
+    
+              
+        </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+              </div>
+        
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>

@@ -1,0 +1,26 @@
+a{
+    color:white;  
+}
+ a:hover{
+     color: white;
+     background-color:#222D3B;
+ }
+.navbar-nav .nav-link{
+    padding-left:20px;
+    padding-top: 20px;
+}
+// .navbar-nav .nav-link {
+//     padding-right: 24px;
+//     padding-left: 0;
+//     margin-left: 25px;
+// }
+img{
+    padding-right: 15px;
+    width: 35px;
+}
+.navbar-nav .nav-item.active .nav-link,
+.navbar-nav .nav-item .nav-link:active,
+.navbar-nav .nav-item .nav-link:focus {
+    background-color:#184A61;
+    color:white;
+}

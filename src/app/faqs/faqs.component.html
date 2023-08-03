@@ -1,0 +1,43 @@
+<div class="container-fluid" >
+    <div class="row">
+        <div class="col-lg-12">
+          <div class="top-head">
+            <h5>FAQ's</h5>
+        </div>
+        <!-- <div class="spinner-table" *ngIf="Loader">
+          <app-spinner>
+          </app-spinner>
+        </div> -->
+        <div class="card">
+            <div class="content">
+              <h2>Page Content</h2>
+            </div>
+            <div class="container-fluid main-content">
+                <form [formGroup]="faqForm" (ngSubmit)="onSubmit()">
+                 
+             
+                    
+                      <div class="form-group row">
+                        <label for="text4" class="col-lg-2 col-form-label">Text</label>
+                        <div class="col-lg-10">
+                          <angular-editor formControlName="product_text" [config]="editorConfig"></angular-editor>
+                          
+                        </div>
+                      </div>
+                      
+                    </form> 
+                  
+              </div>
+
+                      
+        </div>
+        <div class="col-lg-12">
+        <button type="submit" class="btn btn-primary " (click)="onSubmit()">Save</button>
+        </div>
+        
+        </div>
+        </div>
+    </div>
+
+
+

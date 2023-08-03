@@ -1,0 +1,53 @@
+<div class="container-fluid" >
+    <div class="row">
+        <div class="col-lg-12">
+          
+            <div class="container-fluid">
+              <div class="row">
+                  <div class="top-head">
+                      <h5>Testimonials List</h5>
+                      </div>
+                  <button class="btn btn1 btn-success ml-auto" (click)="Addtestimony()"><img src="assets/images/utilityicons/add.png" style="width: 14px;margin-right:8px;">Add Testimonial</button>
+              </div>
+            </div>
+            <div class="card shadow mr-4 ml-4">
+              <div class="tableView mt-5">
+                <!-- <div class="search d-flex">
+                  <div class="input-group mb-3" style="width:220px;">
+                    <input type="text" class="form-control" placeholder="Search for" id="demo" name="searchText" [(ngModel)]="searchText">
+                    <div class="input-group-append">
+                      <span class="input-group-text"><img src="assets/images/utilityicons/search.png" height="15"></span>
+                    </div>
+                  </div> 
+                  <div class="ml-auto">
+                    <img src="assets/images/utilityicons/leftarrow.png" (click)="setPage(pager.currentPage - 1)" width="8">
+                    {{pager.startIndex+1}}-{{pager.endIndex-1}} <span>Of</span> {{pager.totalItems}}
+                    <img src="assets/images/utilityicons/rightarrow.png" (click)="setPage(pager.currentPage + 1)" width="8">
+    
+                  </div>             
+                  </div> -->
+                <table class="table table-responsive-lg table-responsive-md table-responsive-sm">
+                  <thead>
+                    <tr class="heading">
+                    <th>Testimonial</th>
+                    <th>Edit</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let obj of testiMony">
+                    <td>{{obj.name}}</td>
+                    <td (click)="edit(obj)"><a class="editLink">Edit Content</a></td>
+                  </tr>
+                </tbody>
+              </table>
+              <div class="spinner-table" *ngIf="Loader">
+                <app-spinner ></app-spinner>
+              </div>
+              </div>    
+        </div>
+
+        </div>
+    </div>
+</div>
+
+
