@@ -1,0 +1,133 @@
+<div class="contaier-fluid">
+  <div class="row">
+    <div class="col-lg-12">
+      <!-- <div class="top-head">
+              <h5>Strategy List</h5>
+          </div> -->
+      <div class="container-fluid">
+        <div class="row">
+          <div class="top-head">
+            <h5>E-business card users</h5>
+          </div>
+          <button class="btn btn1 btn-success ml-auto" (click)="addEcardUser()"><img
+              src="assets/images/utilityicons/add.png" style="width: 14px;margin-right:8px;">Add User</button>
+        </div>
+      </div>
+      <div class="card shadow mr-4 ml-4">
+        <div class="top-head">
+          <h5>User List</h5>
+        </div>
+        <div class="tableView mt-3">
+          <table class="table table-responsive-lg">
+            <thead>
+              <tr class="heading">
+                <th>Active</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>Title</th>
+                <th>Created Date</th>
+                <th>QR</th>
+                <th>Manage</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let obj of ecardUserObj">
+                <td> <ng-template [ngIf]="obj.active== 'on'" [ngIfElse]="cross">
+                    <img src="assets/images/utilityicons/check.png" width="17">
+                  </ng-template>
+
+                  <ng-template #cross>
+                    <img src="assets/images/utilityicons/cross.png" width="15">
+                  </ng-template>
+                </td>
+                <td>{{obj?.name}}</td>
+                <td>{{obj?.email}}</td>
+                <td>{{obj?.mobile}}</td>
+                <td>{{obj?.title}}</td>
+                <td>{{obj?.updatedDate | date:'shortDate'}}</td>
+                <td (click)="viewQR(obj)"><a class="editLink" data-toggle="modal" data-target="#qrModal">View</a></td>
+                <td><a class="editLink" (click)="editEcardUser(obj)">Edit </a> <a class="ml-1 editLink"
+                    (click)="deleteEcardUser(obj)" data-toggle="modal" data-target="#myModal">Delete</a></td>
+              </tr>
+
+            </tbody>
+          </table>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- DELETE MODAL -->
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="modal" id="myModal" *ngIf="modalOpen" data-backdrop="true">
+        <div class="modal-dialog card-motion">
+          <div class="modal-content text-center">
+
+            <div class="modal-header border-bottom">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+
+            <div class="modal-body">
+              <h3 class="modal-title">Are You Sure You Want To Delete <b>{{deleteName}}</b>?</h3>
+
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button> <button
+                  type="button" class="btn btn-danger" data-dismiss="modal" (click)="deleteEntry()">Delete</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- QR MODAL -->
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="modal" id="qrModal" *ngIf="qrModalOpen" data-backdrop="true">
+        <div class="modal-dialog card-motion">
+          <div class="modal-content text-center">
+
+            <div class="modal-header border-bottom">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+
+            <div class="modal-body">
+
+              <div id="screen" class="card p-5 bgcolor">
+                <div class="row">
+                  <div class="col-md-6 utility-icon">
+                    <p class="utility" style="margin-left: 20px;"> <img class="utilityIcon"
+                        src="assets/images/utilityicons/Utilityaid_logo.png" style=" width: 150px;">
+                    </p>
+                    <div class="innerDetails pt-5">
+                      <span class="header" id="ua-username"
+                        style="font-size: 18px; color: #ffff;">{{qrData.name}}</span>
+                      <br />
+                      <span style="font-size: 18px; color: #ffff;">{{qrData.title}}</span>
+                    </div>
+                  </div>
+                  <div class="col-md-6 barcode">
+                    <img src="{{qrData.qrCode}}" style="border: 1px solid;" alt="QR code">
+                  </div>
+                </div>
+              </div>
+
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button> <button
+                  type="button" class="btn btn-secondary" data-dismiss="modal" (click)="downloadQR()">Download</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

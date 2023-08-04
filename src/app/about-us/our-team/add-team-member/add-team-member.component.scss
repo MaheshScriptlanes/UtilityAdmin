@@ -1,0 +1,57 @@
+.card{
+  margin-right: 10px;
+  margin-left: 10px;
+}
+.col-form-label{
+  font-weight:100 !important;
+}
+.cancel-btn{
+  border-radius: 11px;
+  color: #FF637D;
+  background-color: #fbfbfb;
+  border: none;
+}
+.content{
+  background-color: #F2F7FB;
+  margin-left: 15px;
+  margin-right: 15px;
+  margin-top: 20px;
+  border-radius: 10px;
+  margin-bottom:25px;
+}
+.content h2{
+  font-size: 12px;
+  font-weight: bold;
+  color: #555555;
+  margin-top: 6px;
+  margin-bottom: 0px;
+}
+.uploadfilecontainer {
+  height: 150px;
+  border: 2px solid rgba(0,0,0,0.3);
+  background: white;
+  padding: 20px 20px;
+}
+
+.uploadfilecontainer:hover {
+  cursor: pointer;
+  background: white;
+  opacity: 0.8;
+}
+
+.main-content{
+  padding-left: 15px !important;
+  padding-right: 120px !important;
+}
+.btn-primary{
+  color: #fff;
+  background-color:#0093C1;
+  border-color:#0093C1;
+  margin-bottom:10px;
+  margin-top:10px;
+  width: 120px;
+}
+input[type=checkbox]{
+  width:20px;
+  height:20px;
+}

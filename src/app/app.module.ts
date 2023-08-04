@@ -64,6 +64,24 @@ import { HeaderComponent } from './header/header.component';
 import { SearchDataPipe } from './search-data.pipe';
 import { DateTwoFormatPipe } from './date-two-format.pipe';
 import { LoaderService } from './sharedApi/loader.service';
+import { InvoiceValidationComponent } from './our-services/invoice-validation/invoice-validation.component';
+import { NetZeroAndCarbonComponent } from './our-services/net-zero-and-carbon/net-zero-and-carbon.component';
+import { VoidManagementComponent } from './our-services/void-management/void-management.component';
+import { CustomerCareComponent } from './our-services/customer-care/customer-care.component';
+import { AccountManagementComponent } from './our-services/account-management/account-management.component';
+import { EnergyProcurementComponent } from './our-services/energy-procurement/energy-procurement.component';
+import { OurHeritageComponent } from './about-us/our-heritage/our-heritage.component';
+import { OurTeamComponent } from './about-us/our-team/our-team.component';
+import { AddTeamMemberComponent } from './about-us/our-team/add-team-member/add-team-member.component';
+import { CharityTenderComponent } from './charity-tender/charity-tender.component';
+import { EducationSectorComponent } from './education-sector/education-sector.component';
+import { OurCustomerComponent } from './education-sector/our-customer/our-customer.component';
+import { AddReviewComponent } from './education-sector/our-customer/add-review/add-review.component';
+import { ContactDataComponent } from './contact-data/contact-data.component';
+import { ContactFormDataComponent } from './contact-form-data/contact-form-data.component';
+import { ECardUsersComponent } from './e-card-users/e-card-users.component';
+import { AddECardUserComponent } from './e-card-users/add-e-card-user/add-e-card-user.component';
+
 registerLocaleData(localeFr);
 @NgModule({
   declarations: [
@@ -106,7 +124,24 @@ registerLocaleData(localeFr);
     HeaderComponent,
     SearchDataPipe,
     DateTwoFormatPipe,
-  
+    InvoiceValidationComponent,
+    NetZeroAndCarbonComponent,
+    VoidManagementComponent,
+    CustomerCareComponent,
+    AccountManagementComponent,
+    EnergyProcurementComponent,
+    OurHeritageComponent,
+    OurTeamComponent,
+    AddTeamMemberComponent,
+    CharityTenderComponent,
+    EducationSectorComponent,
+    OurCustomerComponent,
+    AddReviewComponent,
+    ContactDataComponent,
+    ContactFormDataComponent,
+    ECardUsersComponent,
+    AddECardUserComponent,
+
   ],
   imports: [
     BrowserModule,
@@ -117,7 +152,7 @@ registerLocaleData(localeFr);
     AngularEditorModule,
     BrowserAnimationsModule,
     MatSnackBarModule
-    
+
   ],
   providers: [CampaignService,LoginService,HomePageService,ContactListService,LoaListService,PaginationService,
     TestiMonialsService,ProductListService,WhyUaService,OurClientService,AdvisoryService,NewsSerService,FaqserviceService,DateFormatPipe,AuthGuard,CookieService,DateTwoFormatPipe,LoaderService,{provide:HTTP_INTERCEPTORS,useClass:AuthInterceptor,multi:true}, { provide: LOCALE_ID, useValue: 'fr-FR'}],

@@ -32,6 +32,23 @@ import { EditNewsComponent } from './news/edit-news/edit-news.component';
 import { AddAuthorComponent } from './authors/add-author/add-author.component';
 import { EditAuthorComponent } from './authors/edit-author/edit-author.component';
 import { AuthGuard } from './auth.guard';
+import { NetZeroAndCarbonComponent } from './our-services/net-zero-and-carbon/net-zero-and-carbon.component';
+import { InvoiceValidationComponent } from './our-services/invoice-validation/invoice-validation.component';
+import { VoidManagementComponent } from './our-services/void-management/void-management.component';
+import { CustomerCareComponent } from './our-services/customer-care/customer-care.component';
+import { AccountManagementComponent } from './our-services/account-management/account-management.component';
+import { EnergyProcurementComponent } from './our-services/energy-procurement/energy-procurement.component';
+import { OurHeritageComponent } from './about-us/our-heritage/our-heritage.component';
+import { OurTeamComponent } from './about-us/our-team/our-team.component';
+import { AddTeamMemberComponent } from './about-us/our-team/add-team-member/add-team-member.component';
+import { CharityTenderComponent } from './charity-tender/charity-tender.component';
+import { EducationSectorComponent } from './education-sector/education-sector.component';
+import { OurCustomerComponent } from './education-sector/our-customer/our-customer.component';
+import { AddReviewComponent } from './education-sector/our-customer/add-review/add-review.component';
+import { ContactDataComponent } from './contact-data/contact-data.component';
+import { ContactFormDataComponent } from './contact-form-data/contact-form-data.component';
+import { ECardUsersComponent } from './e-card-users/e-card-users.component';
+import { AddECardUserComponent } from './e-card-users/add-e-card-user/add-e-card-user.component';
 
 
 const routes: Routes = [{path:'',component:LoginComponent},
@@ -67,11 +84,29 @@ const routes: Routes = [{path:'',component:LoginComponent},
    {path:'addPartner',component:AddPartnerComponent},
     {path:'addBlog',component:AddBlogComponent},
     {path:'editBlog',component:EditBlogComponent},
-    
+   {path:'invoice',component:InvoiceValidationComponent},
+   {path:'netzerandcarbon',component:NetZeroAndCarbonComponent},
+   {path:'voidmanagement',component:VoidManagementComponent},
+   {path:'customercare',component:CustomerCareComponent},
+   {path:'accountmanagement',component:AccountManagementComponent},
+   {path:'energyprocurement',component:EnergyProcurementComponent},
+   {path:'ourheritage',component:OurHeritageComponent},
+   {path:'ourteam',component:OurTeamComponent},
+   {path:'addteam',component:AddTeamMemberComponent},
+   {path:'charitytender',component:CharityTenderComponent},
+   {path:'edusector',component:EducationSectorComponent},
+   {path:'ourcustomer',component:OurCustomerComponent},
+   {path:'addreview',component:AddReviewComponent},
+   {path:'contactdata',component:ContactDataComponent},
+   {path:'contactformdata',component:ContactFormDataComponent},
+   {path:'ecarduser',component:ECardUsersComponent},
+   {path:'addecarduser',component:AddECardUserComponent},
+
+
 
   ]
   },
- 
+
 
 ];
 

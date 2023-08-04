@@ -1,0 +1,58 @@
+<div class="contaier-fluid">
+  <div class="row">
+    <div class="col-lg-12">
+      <!-- <div class="top-head">
+              <h5>Strategy List</h5>
+          </div> -->
+      <div class="container-fluid">
+        <div class="row">
+          <div class="top-head">
+            <h5>Contact List</h5>
+          </div>
+        </div>
+      </div>
+      <div class="card shadow mr-4 ml-4">
+        <div class="tableView mt-3">
+          <!-- <div class="search d-flex">
+              <div class="input-group mb-3" style="width:220px;">
+                <input type="text" class="form-control" placeholder="Search for" id="demo" name="email">
+                <div class="input-group-append">
+                  <span class="input-group-text"><img src="assets/images/utilityicons/search.png" height="15"></span>
+                </div>
+              </div>
+              <div class="ml-auto">
+                <img src="assets/images/utilityicons/leftarrow.png">
+                hasan mujawar
+                <img src="assets/images/utilityicons/rightarrow.png">
+
+              </div>
+              </div> -->
+          <table class="table table-responsive-lg">
+            <thead>
+              <tr class="heading">
+                <th>Name</th>
+                <th>Email</th>
+                <th>Organisation</th>
+                <th>Phone No.</th>
+                <th>Source</th>
+                <th>Created Date</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let obj of contactDataObj">
+                <td>{{obj?.name}}</td>
+                <td>{{obj?.email}}</td>
+                <td>{{obj?.church}}</td>
+                <td>{{obj?.phone}}</td>
+                <td>{{obj?.source}}</td>
+                <td>{{obj?.createdDate | date:'shortDate'}}</td>
+              </tr>
+
+            </tbody>
+          </table>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

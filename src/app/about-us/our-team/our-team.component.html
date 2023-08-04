@@ -1,0 +1,65 @@
+<div class="contaier-fluid">
+  <div class="row">
+    <div class="col-lg-12">
+      <!-- <div class="top-head">
+              <h5>Strategy List</h5>
+          </div> -->
+      <div class="container-fluid">
+        <div class="row">
+          <div class="top-head">
+            <h5>Our Team</h5>
+          </div>
+          <button class="btn btn1 btn-success ml-auto" (click)="addTeamMember()"><img
+              src="assets/images/utilityicons/add.png" style="width: 14px;margin-right:8px;">Add Member</button>
+        </div>
+      </div>
+      <div class="card shadow mr-4 ml-4">
+        <div class="tableView mt-3">
+          <!-- <div class="search d-flex">
+              <div class="input-group mb-3" style="width:220px;">
+                <input type="text" class="form-control" placeholder="Search for" id="demo" name="email">
+                <div class="input-group-append">
+                  <span class="input-group-text"><img src="assets/images/utilityicons/search.png" height="15"></span>
+                </div>
+              </div>
+              <div class="ml-auto">
+                <img src="assets/images/utilityicons/leftarrow.png">
+                hasan mujawar
+                <img src="assets/images/utilityicons/rightarrow.png">
+
+              </div>
+              </div> -->
+          <table class="table table-responsive-lg">
+            <thead>
+              <tr class="heading">
+                <th>Active</th>
+                <th>Name</th>
+                <th>Team Member</th>
+                <th>Image</th>
+                <th>Edit</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let obj of teamMemberObj">
+                <td> <ng-template [ngIf]="obj.active== 'on'" [ngIfElse]="cross">
+                    <img src="assets/images/utilityicons/check.png" width="17">
+                  </ng-template>
+
+                  <ng-template #cross>
+                    <img src="assets/images/utilityicons/cross.png" width="15">
+                  </ng-template>
+                </td>
+                <td>{{obj?.name}}</td>
+                <td>{{obj?.heading}}</td>
+                <td><img src={{baseUrl+obj.image}} width="100" height="60"></td>
+                <td (click)="editTeamMember(obj)"><a class="editLink">Edit Content</a></td>
+              </tr>
+
+            </tbody>
+          </table>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,66 +1,138 @@
+<div style="min-height:83vh;height:100%;background-color:#222D3B;">
+  <ul class="navbar-nav pt-4">
+    <li class="nav-item">
+      <a class="nav-link" routerLink="home"><img src="assets/images/utilityicons/homepage.png">Home page</a>
+    </li>
+    <li data-toggle="collapse" data-target="#ulitycollapse">
+      <a class="nav-link">
+        <img src="assets/images/utilityicons/whyua.png">Why ua?<img src="assets/images/utilityicons/dropdown.png"
+          style="width:25px;margin-left:75px;">
+      </a>
+      <ul class="navbar-nav" id="ulitycollapse" class="collapse" style="margin:0;padding:0;">
+        <li class="nav-item">
+          <a class="nav-link" routerLink="whyUa">Why ua?</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="blogs">Blog</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="authors">Authors</a>
+        </li>
+      </ul>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" routerLink="product"><img src="assets/images/utilityicons/ourproducts.png">Our products</a>
+    </li>
 
+    <li data-toggle="collapse" data-target="#servicescollapse">
+      <a class="nav-link">
+        <img src="assets/images/utilityicons/whyua.png">Our services<img src="assets/images/utilityicons/dropdown.png"
+          style="width:25px;margin-left:75px;">
+      </a>
+      <ul class="navbar-nav" id="servicescollapse" class="collapse" style="margin:0;padding:0;">
+        <li class="nav-item">
+          <a class="nav-link" routerLink="invoice">Invoice validation
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="netzerandcarbon">Net zero and carbon reporting</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="voidmanagement">Void management service</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="customercare">Customer care</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="accountmanagement">Account management</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="energyprocurement">Energy procurement</a>
+        </li>
+      </ul>
+    </li>
 
-<div   style="min-height:83vh;height:100%;background-color:#222D3B;">
-        <ul class="navbar-nav pt-4">
-            <li class="nav-item">
-                <a class="nav-link" routerLink="home"><img src="assets/images/utilityicons/homepage.png">Home page</a>
-            </li>
-            <li data-toggle="collapse" data-target="#ulitycollapse">
-              <a class="nav-link">
-                <img src="assets/images/utilityicons/whyua.png">Why ua?<img src="assets/images/utilityicons/dropdown.png" style="width:25px;margin-left:75px;" >
-            </a>
-    <ul class="navbar-nav" id="ulitycollapse" class="collapse" style="margin:0;padding:0;">
-       <li class="nav-item">
-        <a class="nav-link" routerLink="whyUa">Why ua?</a>
-       </li>
-       <li class="nav-item">
-        <a class="nav-link" routerLink="blogs">Blog</a>
-       </li>
-       <li class="nav-item">
-        <a class="nav-link" routerLink="authors">Authors</a>
-       </li>
-     </ul>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" routerLink="product"><img src="assets/images/utilityicons/ourproducts.png">Our products</a>
-            </li>
-            <li data-toggle="collapse" data-target="#client">
-              <a class="nav-link" >
-                <img src="assets/images/utilityicons/ourclientsay.png">Our client say<img src="assets/images/utilityicons/dropdown.png" style="width:25px;" class="ml-5">
-            </a>
-    <ul class="navbar-nav" id="client" class="collapse" style="margin-left:0;padding:0;"> 
-       <li class="nav-item">
-        <a class="nav-link" routerLink="casestudy">Case Studies</a>
-       </li>
-       <li class="nav-item">
-        <a class=" nav-link" routerLink="partner">Our Partners</a>
-       </li>
-     </ul>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link " routerLink="advisory"><img src="assets/images/utilityicons/advisoryboard.png">Advisory board</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link " routerLink="news"><img src="assets/images/utilityicons/news.png">News</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link "  routerLink="faq"><img src="assets/images/utilityicons/faq's.png">FAQs?</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link " routerLink="contact"><img src="assets/images/utilityicons/contact.png">Contact</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link "  routerLink="campaign"><img src="assets/images/utilityicons/compaigndata.png">Campaign data</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link " routerLink="loalist"><img src="assets/images/utilityicons/loalist.png">LOA list</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link "  routerLink="testimony"><img src="assets/images/utilityicons/testimonial.png">Testmonials</a>
-            </li>
-            
-        </ul>
-    </div>
-       
-    
- 
+    <li data-toggle="collapse" data-target="#client">
+      <a class="nav-link">
+        <img src="assets/images/utilityicons/ourclientsay.png">Our client say<img
+          src="assets/images/utilityicons/dropdown.png" style="width:25px;" class="ml-5">
+      </a>
+      <ul class="navbar-nav" id="client" class="collapse" style="margin-left:0;padding:0;">
+        <li class="nav-item">
+          <a class="nav-link" routerLink="casestudy">Case Studies</a>
+        </li>
+        <li class="nav-item">
+          <a class=" nav-link" routerLink="partner">Our Partners</a>
+        </li>
+      </ul>
+    </li>
+
+    <li data-toggle="collapse" data-target="#aboutuscollapse">
+      <a class="nav-link">
+        <img src="assets/images/utilityicons/advisoryboard.png">About us<img src="assets/images/utilityicons/dropdown.png"
+          style="width:25px;margin-left:75px;">
+      </a>
+      <ul class="navbar-nav" id="aboutuscollapse" class="collapse" style="margin:0;padding:0;">
+        <li class="nav-item">
+          <a class="nav-link" routerLink="ourheritage">Our heritage
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="ourteam">Our team</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="advisory">Advisory boards</a>
+        </li>
+      </ul>
+    </li>
+
+    <li class="nav-item">
+      <a class="nav-link " routerLink="news"><img src="assets/images/utilityicons/news.png">News</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link " routerLink="charitytender"><img src="assets/images/utilityicons/news.png">National Charity Tender
+      </a>
+    </li>
+
+    <li data-toggle="collapse" data-target="#edusectorcollapse">
+      <a class="nav-link" routerLink="edusector">
+        <img src="assets/images/utilityicons/advisoryboard.png">Education sector<img src="assets/images/utilityicons/dropdown.png"
+          style="width:25px;margin-left:75px;">
+      </a>
+      <ul class="navbar-nav" id="edusectorcollapse" class="collapse" style="margin:0;padding:0;">
+        <li class="nav-item">
+          <a class="nav-link" routerLink="ourcustomer">Our customers
+          </a>
+        </li>
+      </ul>
+    </li>
+
+    <li class="nav-item">
+      <a class="nav-link " routerLink="faq"><img src="assets/images/utilityicons/faq's.png">FAQs?</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link " routerLink="contact"><img src="assets/images/utilityicons/contact.png">Contact</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link " routerLink="campaign"><img src="assets/images/utilityicons/compaigndata.png">Campaign
+        data</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link " routerLink="loalist"><img src="assets/images/utilityicons/loalist.png">LOA list</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link " routerLink="testimony"><img src="assets/images/utilityicons/testimonial.png">Testmonials</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link " routerLink="contactdata"><img src="assets/images/utilityicons/testimonial.png">Contact data</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link " routerLink="contactformdata"><img src="assets/images/utilityicons/testimonial.png">Contact form data</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link " routerLink="ecarduser"><img src="assets/images/utilityicons/testimonial.png">E-business card users
+      </a>
+    </li>
+
+  </ul>
+</div>

@@ -18,13 +18,13 @@
                   <div class="input-group-append">
                     <span class="input-group-text"><img src="assets/images/utilityicons/search.png" height="15"></span>
                   </div>
-                </div> 
-                <div class="ml-auto">
+                </div>
+                <div class="ml-auto mr-3 mt-3">
                   <img src="assets/images/utilityicons/leftarrow.png" (click)="setPage(pager.currentPage - 1)" width="8">
                   {{pager.startIndex+1}}-{{pager.endIndex}} <span>Of</span> {{pager.totalItems}}
                   <img src="assets/images/utilityicons/rightarrow.png" (click)="setPage(pager.currentPage + 1)" width="8">
-  
-                </div>             
+
+                </div>
                 </div>
               <table class="table table-responsive-lg">
                 <thead>
@@ -41,7 +41,7 @@
                     <td>    <ng-template [ngIf]="obj.active== 'on'" [ngIfElse]="cross">
                       <img src="assets/images/utilityicons/check.png"  width="17">
                     </ng-template>
-                    
+
                     <ng-template #cross>
                       <img src="assets/images/utilityicons/cross.png"  width="15">
                     </ng-template></td>
@@ -50,10 +50,10 @@
                     <td><img src={{baseUrl+obj.image}} width="100" height="60"></td>
                     <td (click)="edit(obj)"><a class="editLink">Edit Content</a></td>
                   </tr>
-       
+
                 </tbody>
               </table>
-           </div> 
+           </div>
         </div>
         <!-- <div class="d-flex justify-content-center pagination" *ngIf="pager.pages && pager.pages.length">
             <button type="button" class="btn btn-link" *ngIf="pagedItems.length >=50" (click)="setPage(pager.currentPage - 1)"><i class="fa fa-angle-left mr-1 "></i>Previous</button>
