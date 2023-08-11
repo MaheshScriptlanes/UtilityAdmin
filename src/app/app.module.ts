@@ -81,6 +81,7 @@ import { ContactDataComponent } from './contact-data/contact-data.component';
 import { ContactFormDataComponent } from './contact-form-data/contact-form-data.component';
 import { ECardUsersComponent } from './e-card-users/e-card-users.component';
 import { AddECardUserComponent } from './e-card-users/add-e-card-user/add-e-card-user.component';
+import { CanWeHelpComponent } from './can-we-help/can-we-help.component';
 
 registerLocaleData(localeFr);
 @NgModule({
@@ -141,6 +142,7 @@ registerLocaleData(localeFr);
     ContactFormDataComponent,
     ECardUsersComponent,
     AddECardUserComponent,
+    CanWeHelpComponent,
 
   ],
   imports: [

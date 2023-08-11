@@ -36,7 +36,9 @@ export class AddECardUserComponent implements OnInit {
     mobile: [''],
     email: [''],
     address: [''],
-    profilePic: ['']
+    profilePic: [''],
+    qrCode:[''],
+    slug:['']
   })
 
   ngOnInit(): void {
@@ -64,7 +66,7 @@ export class AddECardUserComponent implements OnInit {
           this.snackbar.showMessage("Data Updated Successfully", 'Undo')
           this.route.navigate(['dashboard/ecarduser']);
         }
-        this.getData();
+        // this.getData();
       })
     }
   }
@@ -89,7 +91,9 @@ export class AddECardUserComponent implements OnInit {
       mobile: this.editEcardUserObject.mobile,
       email: this.editEcardUserObject.email,
       address: this.editEcardUserObject.address,
-      profilePic: this.editEcardUserObject.profilePic
+      profilePic: this.editEcardUserObject.profilePic,
+      slug : this.editEcardUserObject.slug,
+      qrCode : this.editEcardUserObject.qrCode
     })
   }
 

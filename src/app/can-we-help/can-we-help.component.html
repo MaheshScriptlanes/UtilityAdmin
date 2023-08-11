@@ -1,0 +1,159 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="top-head">
+        <h5>Can We Help Section</h5>
+      </div>
+      <div class="card">
+        <div class="content">
+          <h2>Header 1</h2>
+        </div>
+        <div class="container-fluid main-content">
+          <form [formGroup]="canWeHelpForm" (ngSubmit)="onSubmit()">
+            <!-- Header 1 -->
+            <div class="form-group row">
+              <label for="header1" class="col-lg-2 col-form-label ">Header 1</label>
+              <div class="col-lg-10">
+                <textarea cols="40" rows="2" class="form-control" formControlName="header1"></textarea>
+                <div class="col-lg-10 error-message"
+                  *ngIf="canWeHelpForm.get('header1').hasError('charLengthExceeded')">
+                  Header character length exceeded!. Char limit for form value is 22.
+                </div>
+              </div>
+            </div>
+            <!-- Points -->
+            <div class="form-group row">
+              <label for="point1" class="col-lg-2 col-form-label ">Point 1</label>
+              <div class="col-lg-10">
+                <textarea cols="40" rows="2" class="form-control" formControlName="point1"></textarea>
+                <div class="col-lg-10 error-message" *ngIf="canWeHelpForm.get('point1').hasError('charLengthExceeded')">
+                  Points character length exceeded!. Char limit for form value is 160.
+                </div>
+              </div>
+
+            </div>
+            <div class="form-group row">
+              <label for="point2" class="col-lg-2 col-form-label ">Point 2</label>
+              <div class="col-lg-10">
+                <textarea cols="40" rows="2" class="form-control" formControlName="point2"></textarea>
+                <div class="col-lg-10 error-message" *ngIf="canWeHelpForm.get('point2').hasError('charLengthExceeded')">
+                  Points character length exceeded!. Char limit for form value is 160.
+                </div>
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="point3" class="col-lg-2 col-form-label ">Point 3</label>
+              <div class="col-lg-10">
+                <textarea cols="40" rows="2" class="form-control" formControlName="point3"></textarea>
+                <div class="col-lg-10 error-message" *ngIf="canWeHelpForm.get('point3').hasError('charLengthExceeded')">
+                  Points character length exceeded!. Char limit for form value is 160.
+                </div>
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="point4" class="col-lg-2 col-form-label ">Point 4</label>
+              <div class="col-lg-10">
+                <textarea cols="40" rows="2" class="form-control" formControlName="point4"></textarea>
+                <div class="col-lg-10 error-message" *ngIf="canWeHelpForm.get('point4').hasError('charLengthExceeded')">
+                  Points character length exceeded!. Char limit for form value is 160.
+                </div>
+              </div>
+            </div>
+            <!-- <div class="form-group row">
+              <label for="txtEditor1" class="col-lg-2 col-form-label">Text 1</label>
+              <div class="col-lg-10">
+                <angular-editor formControlName="txtEditor1" [config]="editorConfig">
+
+                </angular-editor>
+              </div>
+            </div> -->
+            <div class="page-header">
+              <h2>Header 2</h2>
+            </div>
+
+            <div class="form-group row">
+              <label for="header2" class="col-lg-2 col-form-label ">Header 2</label>
+              <div class="col-lg-10">
+                <textarea cols="40" rows="2" class="form-control" formControlName="header2"></textarea>
+                <div class="col-lg-10 error-message"
+                  *ngIf="canWeHelpForm.get('header2').hasError('charLengthExceeded')">
+                  Header character length exceeded!. Char limit for form value is 22.
+                </div>
+              </div>
+            </div>
+            <!-- Points -->
+            <div class="form-group row">
+              <label for="point5" class="col-lg-2 col-form-label ">Point 1</label>
+              <div class="col-lg-10">
+                <textarea cols="40" rows="2" class="form-control" formControlName="point5"></textarea>
+                <div class="col-lg-10 error-message" *ngIf="canWeHelpForm.get('point5').hasError('charLengthExceeded')">
+                  Points character length exceeded!. Char limit for form value is 160.
+                </div>
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="point6" class="col-lg-2 col-form-label ">Point 2</label>
+              <div class="col-lg-10">
+                <textarea cols="40" rows="2" class="form-control" formControlName="point6"></textarea>
+                <div class="col-lg-10 error-message" *ngIf="canWeHelpForm.get('point6').hasError('charLengthExceeded')">
+                  Points character length exceeded!. Char limit for form value is 160.
+                </div>
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="point7" class="col-lg-2 col-form-label ">Point 3</label>
+              <div class="col-lg-10">
+                <textarea cols="40" rows="2" class="form-control" formControlName="point7"></textarea>
+                <div class="col-lg-10 error-message" *ngIf="canWeHelpForm.get('point7').hasError('charLengthExceeded')">
+                  Points character length exceeded!. Char limit for form value is 160.
+                </div>
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="point8" class="col-lg-2 col-form-label ">Point 4</label>
+              <div class="col-lg-10">
+                <textarea cols="40" rows="2" class="form-control" formControlName="point8"></textarea>
+                <div class="col-lg-10 error-message" *ngIf="canWeHelpForm.get('point8').hasError('charLengthExceeded')">
+                  Points character length exceeded!. Char limit for form value is 160.
+                </div>
+              </div>
+            </div>
+
+            <div class="page-header">
+              <h2>Form Value</h2>
+            </div>
+
+            <div class="form-group row">
+              <label for="formValue1" class="col-lg-2 col-form-label ">Form value 1</label>
+              <div class="col-lg-10">
+                <textarea cols="40" rows="2" class="form-control" formControlName="formValue1"></textarea>
+                <div class="col-lg-10 error-message"
+                  *ngIf="canWeHelpForm.get('formValue1').hasError('charLengthExceeded')">
+                  Form value character length exceeded!. Char limit for form value is 35
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group row">
+              <label for="formValue2" class="col-lg-2 col-form-label ">Form value 2</label>
+              <div class="col-lg-10">
+                <textarea cols="40" rows="2" class="form-control" formControlName="formValue2"></textarea>
+                <div class="col-lg-10 error-message"
+                  *ngIf="canWeHelpForm.get('formValue2').hasError('charLengthExceeded')">
+                  Form value character length exceeded!. Char limit for form value is 35
+                </div>
+              </div>
+            </div>
+
+
+          </form>
+
+        </div>
+
+
+      </div>
+      <button type="submit" class="btn btn-primary ml-3 mt-3" [disabled]="canWeHelpForm.invalid"
+        (click)="onSubmit()">Save</button>
+    </div>
+  </div>
+</div>
